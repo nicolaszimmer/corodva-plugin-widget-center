@@ -1,0 +1,21 @@
+{
+  "name": "WidgetCenter", // Your Plugin Name (CamalCased)
+  "version": "0.0.1", // Plugin version.
+  "description": "Access iOS WidgetCenter", // What you want the desc to say.
+  "cordova": {
+    "id": "cordova-plugin-widget-center", // same as your Github Repo.
+    "platforms": [ // The platforms you're targeting.
+      "ios" // We're only targeting IOS for this tutorial.
+    ]
+  },
+  "keywords": [ // Keywords that your plugin will be searched by.
+    "cordova",
+    "widget",
+		"widgets",
+		"widgetcenter"
+    "ecosystem:cordova",
+    "cordova-ios",
+  ],
+  "author": "nicolaszimmer", // Your name
+  "license": "MIT" // The license you want (recommended to be MIT)
+}
