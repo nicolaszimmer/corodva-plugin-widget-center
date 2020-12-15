@@ -5,4 +5,7 @@ var CDVWidgetCenter = function() {};
 CDVWidgetCenter.reloadAllTimelines = function(onSuccess, onError) {
 	exec(onSuccess, onError, PLUGIN_NAME, "reloadAllTimelines", []);
 };
+CDVWidgetCenter.reloadTimelines = function(kind, onSuccess, onError) {
+	exec(onSuccess, onError, PLUGIN_NAME, "reloadAllTimelines", [kind]);
+};
 module.exports = CDVWidgetCenter;
