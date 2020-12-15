@@ -1,11 +1,10 @@
 import Foundation
 import WidgetKit
 
-@objc(CDVWidgetCenter)
 public class CDVWidgetCenter : CDVPlugin {
 
-  @objc
-  func reloadTimelines(_ command: CDVInvokedUrlCommand) {
+  @objc (reloadTimelines:)
+  func reloadTimelines(command: CDVInvokedUrlCommand) {
     let kind = command.argument(at: 0) as! String?
     let pluginResult:CDVPluginResult
 		let res = WidgetCenter.shared.reloadTimelines(ofKind kind)
@@ -19,8 +18,8 @@ public class CDVWidgetCenter : CDVPlugin {
     self.commandDelegate.send(pluginResult, callbackId: command.callbackId)
   }
 
-	@objc
-	func reloadAllTimelines(_ command: CDVInvokedUrlCommand) {
+	@objc (reloadAllTimelines:)
+	func reloadAllTimelines(command: CDVInvokedUrlCommand) {
 		let pluginResult:CDVPluginResult
 		 let res = WidgetCenter.shared.reloadAllTimelines()
 		 debugPrint(res)
