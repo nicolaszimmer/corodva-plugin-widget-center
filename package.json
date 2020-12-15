@@ -1,6 +1,6 @@
 {
 	"name": "cordova-plugin-widget-center",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"description": "Access the iOS WidgetCenter",
 	"cordova": {
 		"id": "cordova-plugin-widget-center",
@@ -9,9 +9,9 @@
 		]
 	},
 	"repository": {
-	 "type": "git",
-	 "url": "git+https://github.com/nicolaszimmer/corodva-plugin-widget-center.git"
- },
+		"type": "git",
+		"url": "git+https://github.com/nicolaszimmer/corodva-plugin-widget-center.git"
+	},
 	"keywords": [
 		"cordova",
 		"widget",
