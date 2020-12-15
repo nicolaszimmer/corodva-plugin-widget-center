@@ -3,13 +3,11 @@ import WidgetKit
 
 public class CDVWidgetCenter : CDVPlugin {
 
-	@available(iOS 14, *)
   func reloadTimelines(command: CDVInvokedUrlCommand) {
     let kind = command.argument(at: 0) as! String?
     let pluginResult:CDVPluginResult
-		let res = WidgetCenter.shared.reloadTimelines(ofKind: kind)
-		debugPrint(res)
-    if res != nil {
+		if #available(iOS 14, *) {
+				WidgetCenter.shared.reloadTimelines(ofKind: kind)
         pluginResult = CDVPluginResult.init(status: CDVCommandStatus_OK, messageAs: res)
     } else {
         pluginResult = CDVPluginResult.init(status: CDVCommandStatus_ERROR)
@@ -18,17 +16,14 @@ public class CDVWidgetCenter : CDVPlugin {
     self.commandDelegate.send(pluginResult, callbackId: command.callbackId)
   }
 
-	@available(iOS 14, *)
 	func reloadAllTimelines(command: CDVInvokedUrlCommand) {
 		let pluginResult:CDVPluginResult
-		 let res = WidgetCenter.shared.reloadAllTimelines()
-		 debugPrint(res)
-			if res != nil {
-					pluginResult = CDVPluginResult.init(status: CDVCommandStatus_OK, messageAs: res)
+		if #available(iOS 14, *) {
+ 					WidgetCenter.shared.reloadAllTimelines()
+					pluginResult = CDVPluginResult.init(status: CDVCommandStatus_OK, messageAs: 'Done')
 			} else {
 					pluginResult = CDVPluginResult.init(status: CDVCommandStatus_ERROR)
 			}
-
 		self.commandDelegate.send(pluginResult, callbackId: command.callbackId)
 	}
 
