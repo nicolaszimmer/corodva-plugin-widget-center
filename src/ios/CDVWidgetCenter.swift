@@ -6,7 +6,7 @@ import WidgetKit
 public class CDVWidgetCenter : CDVPlugin {
 
   func reloadTimelines(command: CDVInvokedUrlCommand) {
-    let kind = command.argument(at: 0) as! String?
+    let kind = command.argument(at: 0) as! String
     let pluginResult:CDVPluginResult
 		if #available(iOS 14, *) {
 				WidgetCenter.shared.reloadTimelines(ofKind: kind)
