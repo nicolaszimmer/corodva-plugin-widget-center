@@ -1,5 +1,5 @@
 {
-	"name": "CDVWidgetCenter",
+	"name": "cordova-plugin-widget-center",
 	"version": "0.0.1",
 	"description": "Access the iOS WidgetCenter",
 	"cordova": {
@@ -8,13 +8,17 @@
 			"ios"
 		]
 	},
+	"repository": {
+	 "type": "git",
+	 "url": "git+https://github.com/nicolaszimmer/corodva-plugin-widget-center.git"
+ },
 	"keywords": [
 		"cordova",
 		"widget",
 		"widgets",
 		"WidgetCenter",
 		"ecosystem:cordova",
-		"cordova-ios",
+		"cordova-ios"
 	],
 	"author": "nicolaszimmer",
 	"license": "MIT"
