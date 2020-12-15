@@ -10,7 +10,7 @@ public class CDVWidgetCenter : CDVPlugin {
     let pluginResult:CDVPluginResult
 		if #available(iOS 14, *) {
 				WidgetCenter.shared.reloadTimelines(ofKind: kind)
-        pluginResult = CDVPluginResult.init(status: CDVCommandStatus_OK, messageAs: res)
+        pluginResult = CDVPluginResult.init(status: CDVCommandStatus_OK, messageAs: "Timeline \(kind) reloaded")
     } else {
         pluginResult = CDVPluginResult.init(status: CDVCommandStatus_ERROR)
     }
@@ -22,7 +22,7 @@ public class CDVWidgetCenter : CDVPlugin {
 		let pluginResult:CDVPluginResult
 		if #available(iOS 14, *) {
  					WidgetCenter.shared.reloadAllTimelines()
-					pluginResult = CDVPluginResult.init(status: CDVCommandStatus_OK, messageAs: 'Done')
+					pluginResult = CDVPluginResult.init(status: CDVCommandStatus_OK, messageAs: "Timelines reloaded")
 			} else {
 					pluginResult = CDVPluginResult.init(status: CDVCommandStatus_ERROR)
 			}
