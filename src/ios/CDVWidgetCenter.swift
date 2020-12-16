@@ -42,7 +42,7 @@ public class CDVWidgetCenter : CDVPlugin {
 					WidgetCenter.shared.getCurrentConfigurations { result in
 				    guard case .success(let widgets) = result else { return }
 						debugPrint("retrieved widgets")
-						pluginResult = CDVPluginResult.init(status: CDVCommandStatus_OK, messageAs: widgets)
+						pluginResult = CDVPluginResult(status: CDVCommandStatus_OK, messageAs: widgets)
 						self.commandDelegate.send(pluginResult, callbackId: command.callbackId)
 					}
 			} else {
