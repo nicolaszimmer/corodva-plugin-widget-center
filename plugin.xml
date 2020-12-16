@@ -2,7 +2,7 @@
 <plugin id="cordova-plugin-widget-center" version="0.0.1" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
 	<name>WidgetCenter</name>
 	<description>Cordova Widget Center Plugin for iOS 14+</description>
-	<js-module name="WidgetCenter" src="www/widgetCenter.js">
+	<js-module name="WidgetCenter" src="www/WidgetCenter.js">
 		<clobbers target="WidgetCenter"/>
 	</js-module>
 
