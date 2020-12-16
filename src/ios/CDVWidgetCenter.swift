@@ -7,7 +7,7 @@ public class CDVWidgetCenter : CDVPlugin {
 
   func reloadTimelines(command: CDVInvokedUrlCommand) {
     let kind = command.argument(at: 0) as! String
-    let pluginResult:CDVPluginResult
+    var pluginResult:CDVPluginResult
 		debugPrint("reloadTimelines ofKind "+kind)
 		if #available(iOS 14, *) {
 			debugPrint("available")
@@ -21,7 +21,7 @@ public class CDVWidgetCenter : CDVPlugin {
   }
 
 	func reloadAllTimelines(command: CDVInvokedUrlCommand) {
-		let pluginResult:CDVPluginResult
+		var pluginResult:CDVPluginResult
 		debugPrint("reloadAllTimelines")
 		if #available(iOS 14, *) {
 					debugPrint("available")
@@ -34,7 +34,7 @@ public class CDVWidgetCenter : CDVPlugin {
 	}
 
 	func getCurrentConfigurations(command: CDVInvokedUrlCommand) {
-		let pluginResult:CDVPluginResult
+		var pluginResult:CDVPluginResult
 		debugPrint("getCurrentConfigurations")
 		if #available(iOS 14, *) {
 					debugPrint("available")
