@@ -7,4 +7,7 @@ WidgetCenter.reloadAllTimelines = function(onSuccess, onError) {
 WidgetCenter.reloadTimelines = function(kind, onSuccess, onError) {
 	exec(onSuccess, onError, PLUGIN_NAME, "reloadAllTimelines", [kind]);
 };
+WidgetCenter.getCurrentConfigurations = function(onSuccess, onError) {
+	exec(onSuccess, onError, PLUGIN_NAME, "getCurrentConfigurations", []);
+};
 module.exports = WidgetCenter;
