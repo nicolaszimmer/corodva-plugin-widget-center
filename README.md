@@ -29,6 +29,10 @@ To get a list of user-configured widgets, use [`WidgetCenter.getCurrentConfigur
 
 The return values are only concenated into a string at the moment in this version of the plugin.
 
+```
+WidgetCenter.getCurrentConfigurations(s=>console.log('Success:',s),e=>console.log('Error:',e))
+```
+
 ### Requesting a Reload of Your Widget's Timeline
 
 Changes in your app's state may affect a widget's timeline. When this happens, you can tell WidgetKit to reload the timeline for either a specific kind of widget or all widgets. For example, your app might register for push notifications based on the widgets the user has configured. When your app receives a push notification that changes the state for one or more of your widgets, requesting a reload of their timelines updates their display.
@@ -36,11 +40,11 @@ Changes in your app's state may affect a widget's timeline. When this happens, y
 If you only need to reload a certain kind of widget, you can request a reload for only that kind. For example, in response to a push notification about a change in a game's status, you could request a reload for only the game status widgets:
 
 ```
-WidgetCenter.reloadTimelines("com.mygame.gamestatus")
+WidgetCenter.reloadTimelines("com.mygame.gamestatus",s=>console.log('Success:',s),e=>console.log('Error:',e))
 ```
 
 To request a reload for all of your widgets:
 
 ```
-WidgetCenter.reloadAllTimelines()
+WidgetCenter.reloadAllTimelines(s=>console.log('Success:',s),e=>console.log('Error:',e))
 ```
