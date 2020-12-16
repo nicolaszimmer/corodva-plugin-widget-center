@@ -34,21 +34,23 @@ public class CDVWidgetCenter : CDVPlugin {
 	}
 
 	func getCurrentConfigurations(command: CDVInvokedUrlCommand) {
-		var pluginResult:CDVPluginResult
 		debugPrint("getCurrentConfigurations")
 		if #available(iOS 14, *) {
 					debugPrint("available")
 					WidgetCenter.shared.getCurrentConfigurations { result in
 				    guard case .success(let widgets) = result else {
+							var pluginResult:CDVPluginResult
 							pluginResult = CDVPluginResult.init(status: CDVCommandStatus_ERROR, messageAs: "Unable to retrieve WidgetInfo")
 							self.commandDelegate.send(pluginResult, callbackId: command.callbackId)
 							return
 						}
 						debugPrint("retrieved widgets")
+						var pluginResult:CDVPluginResult
 						pluginResult = CDVPluginResult.init(status: CDVCommandStatus_OK, messageAs: widgets)
 						self.commandDelegate.send(pluginResult, callbackId: command.callbackId)
 					}
 			} else {
+					var pluginResult:CDVPluginResult
 					pluginResult = CDVPluginResult.init(status: CDVCommandStatus_ERROR, messageAs: "This plugin requires iOS 14 +")
 					self.commandDelegate.send(pluginResult, callbackId: command.callbackId)
 			}
