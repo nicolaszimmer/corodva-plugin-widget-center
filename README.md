@@ -1,7 +1,7 @@
 
 # cordova-plugin-widget-center
 
-**This plugin gives you access to the WidgetCenter introduced in iOS14. Use it to retrieve information about widgets that extend your Cordova app or reload their timelines (i.e. dynamic content)**
+**This plugin provides access to the WidgetCenter introduced in iOS14. Use it to retrieve information about widgets that extend your Cordova app or reload their timelines (i.e. update dynamic content)**
 
 Installation:
 
@@ -15,11 +15,11 @@ This plugin was written in Swift and requires Cordova iOS 5.0.0+ or something li
 
 For general advice, please refer to Apple's developer information on [WidgetCenter](https://developer.apple.com/documentation/widgetkit/widgetcenter) and [creating widgets](https://developer.apple.com/documentation/widgetkit/creating-a-widget-extension) in your Xcode project.
 
-The following documentation is adapted to the plugin use from the official docs for your convenience:
+The following documentation is adapted to plugin use from the official docs for your convenience:
 
 ### Getting Configured Widget Information
 
-To get a list of user-configured widgets, use [`WidgetCenter.getCurrentConfigurations()`](https://developer.apple.com/documentation/widgetkit/widgetcenter/getcurrentconfigurations(_:)). The retun value conatins the following information:
+To get a list of user-configured widgets, use [`WidgetCenter.getCurrentConfigurations()`](https://developer.apple.com/documentation/widgetkit/widgetcenter/getcurrentconfigurations(_:)). The return value contains the following information:
 
 * The `kind` string matches the parameter you use when creating the widget's [`StaticConfiguration`](https://developer.apple.com/documentation/widgetkit/staticconfiguration) or [`IntentConfiguration`](https://developer.apple.com/documentation/widgetkit/intentconfiguration).
 
@@ -27,7 +27,7 @@ To get a list of user-configured widgets, use [`WidgetCenter.getCurrentConfigur
 
 * If your widget is based on [`IntentConfiguration`](https://developer.apple.com/documentation/widgetkit/intentconfiguration), the `configuration` property provides the custom intent containing the user-customized values for each individual widget.
 
-The return values are only concenated into a string at the moment in this version of the plugin.
+The return values are only concenated into a string in this version of the plugin.
 
 ```
 WidgetCenter.getCurrentConfigurations(s=>console.log('Success:',s),e=>console.log('Error:',e))
