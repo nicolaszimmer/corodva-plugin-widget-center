@@ -6,7 +6,7 @@
 Installation:
 
 ```
-cordova plugin add corodova-plugin-widget-center
+cordova plugin add cordova-plugin-widget-center
 ```
 
 This plugin was written in Swift and requires Cordova iOS 5.0.0+ or something like `cordova-plugin-add-swift-support` to properly build.
